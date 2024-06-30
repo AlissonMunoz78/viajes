@@ -1,4 +1,4 @@
-/*===============Propiedades Globales================*/
+/* =============== Propiedades Globales ================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -7,18 +7,16 @@ body {
     overflow-x: hidden;
 }
 
-
-/*===================MENU==========================*/
+/* =============== MENÚ ================ */
 
 #menu a,
 button {
     font-size: 18px !important;
     font-weight: 600;
-
 }
+
 .header {
     background-image: url("/img/fondo.jpg");
-    /* Reemplaza con tu imagen de fondo */
     background-size: cover;
     background-position: center;
     color: white;
@@ -30,26 +28,23 @@ button {
 
 #menu a {
     color: #3f3f3f;
-
 }
 
-/*===================SLIDER DE IMAGENES==========================*/
+/* =============== SLIDER DE IMÁGENES ================ */
 
 .carousel-inner {
     max-height: 39rem !important;
 }
 
-/*===================SECCION NUESTRO EQUIPO IMAGEN==========================*/
-
-
+/* =============== SECCIÓN NUESTRO EQUIPO IMAGEN ================ */
 
 #img-equipo {
     max-height: 30rem !important;
     width: 50%;
 }
 
+/* =============== SECCIÓN NUESTRO EQUIPO MAPA ================ */
 
-/*===================SECCION NUESTRO EQUIPO MAPA==========================*/
 #local {
     margin-top: 50px;
     background-color: #f3f3f3;
@@ -64,15 +59,14 @@ button {
     height: 500px;
 }
 
-
 .wrapper-local {
     width: 50%;
     margin-left: 100px;
     padding-top: 150px;
 }
 
+/* =============== SECCIÓN EQUIPO MIAMI ================ */
 
-/*===========================SECCION EQUIPO MIAMI==================================*/
 #numeros-local {
     margin: 0 !important;
     padding: 0 !important;
@@ -96,7 +90,7 @@ button {
     margin: 0;
 }
 
-/*=========================CONTACTOS BACKGROUND================================*/
+/* =============== CONTACTOS BACKGROUND ================ */
 
 #bg-contactos {
     position: relative;
@@ -109,7 +103,7 @@ button {
     position: relative;
 }
 
-/*=========================CONTACTOS FORMULARIO================================*/
+/* =============== CONTACTOS FORMULARIO ================ */
 
 #contenedor-formulario {
     position: absolute;
@@ -118,22 +112,17 @@ button {
     transform: translate(-50%, -50%);
     background: #fbfafa;
     border-radius: 5px;
-
 }
 
 #titulo-formulario {
     color: #3f3f3f;
 }
 
-
-
-
-/*=========================FOOTER================================*/
+/* =============== FOOTER ================ */
 
 footer {
     background: #1b2a4e;
     min-height: 100px;
-    ;
 }
 
 footer p {
@@ -147,10 +136,9 @@ footer p {
     color: #f3f3f3;
 }
 
-/*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
+/* =============== MEDIA QUERIES PANTALLA ANCHA ================ */
 
-@media (max-width:1200px) {
-
+@media (max-width: 1200px) {
     #intro,
     #equipo {
         width: 90% !important;
@@ -167,20 +155,16 @@ footer p {
         margin: auto;
         padding-top: 50px;
     }
-
 }
 
-/*=========================MEDIA QUERIES PANTALLA SM================================*/
+/* =============== MEDIA QUERIES PANTALLA SM ================ */
 
-
-@media (max-width:768px) {
-
+@media (max-width: 768px) {
     #intro,
     #equipo {
         width: 90% !important;
         margin: auto;
     }
-
 
     #img-equipo {
         max-height: 20rem !important;
@@ -205,17 +189,12 @@ footer p {
     #bg-contactos {
         top: -120px;
     }
-
-
 }
 
-/*=========================MEDIA QUERIES PANTALLA EXTRA-SM================================*/
+/* =============== MEDIA QUERIES PANTALLA EXTRA-SM ================ */
 
 @media (max-width: 576px) {
-    #servicios-fila-2 {
-        width: 100% !important;
-    }
-
+    #servicios-fila-2,
     #servicios-fila-1 {
         width: 100% !important;
     }

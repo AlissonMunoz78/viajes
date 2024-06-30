@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecuaviajes</title>
-    <link rel="stylesheet" href="css/Inicio.css">
+    <link rel="stylesheet" href="css/rid.css">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ajuste del slider */
+        .carousel-item img {
+            height: 300px; /* Cambia este valor según lo que necesites */
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body>
@@ -93,14 +100,12 @@
 
     <!-- INTRODUCCION DE SERVICIOS-->
 
-
-
-    <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto"
+    <section class="d-flex flex-column justify-content-center align-items-center pt-5 text-center w-50 m-auto"
         id="intro">
         <h1 class="p-3 fs-2 border-top border-3">Una agencia de viaje Única <span class="text-primary">VIAJA POR EL
                 MUNDO
                 CON NOSOTROS!<span /></h1>
-        <p class="p-3  fs-4">
+        <p class="p-3 fs-4">
             <span class="text-primary">EcuViaje</span> es la agencia donde te ayudamos a organizar y ejecutar todo tu
             viaje al
             destino que tu quieras.
@@ -109,12 +114,10 @@
 
     <!-- TIPOS DE SERVICIOS-->
 
-
-
     <section class="w-100">
         <div class="row w-75 mx-auto" id="servicios-fila-1">
             <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
-                <img src="img/roma.jpg"desarrollo" width="180" height="160">
+                <img src="img/roma.jpg" width="180" height="160">
 
                 <div>
                     <h3 class="fs-5 mt-4 px-4 pb-1">Italia - Roma</h3>
@@ -125,7 +128,7 @@
 
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start  my-5 icono-wrap">
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
                 <img src="img/machu.jpg" alt="concepto" width="180" height="160">
 
                 <div>
@@ -138,12 +141,12 @@
         </div>
 
         <div class="row w-75 mx-auto mb-5" id="servicios-fila-2">
-            <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start  my-5 icono-wrap">
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
                 <img src="img/piramide.jpg" alt="diseño" width="180" height="160">
                 <div>
-                    <h3 class="fs-5 mt-4 px-4 pb-1">Egipto-Piramides</h3>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Egipto - Pirámides</h3>
                     <p class="px-4">Viaja al corazón del antiguo Egipto y maravíllate con las grandiosas Pirámides de
-                        Giza. </p>
+                        Giza.</p>
                 </div>
             </div>
 
@@ -154,23 +157,21 @@
                     <h3 class="fs-5 mt-4 px-4 pb-1">Ecuador - Quito</h3>
                     <p class="px-4">Experimenta la sensación única de estar en dos hemisferios al mismo tiempo en la
                         Mitad del
-                        Mundo, Ecuador. Ubicado cerca de Quito</p>
+                        Mundo, Ecuador. Ubicado cerca de Quito.</p>
                 </div>
-
             </div>
             <div class="mb-2">
-                <button type="submit" class=" btn btn-primary w-100 fs-5" href="destinos.htm">Ver más destinos</button>
+                <button type="submit" class="btn btn-primary w-100 fs-5" href="destinos.htm">Ver más destinos</button>
             </div>
         </div>
     </section>
 
     <!-- SECCION ACERCA DE NOSOTROS-->
 
-
     <section>
         <div class="container w-50 m-auto text-center" id="equipo">
             <h1 class="mb-5 fs-2">Equipo pequeño con <span class="text-primary">resultados Grandes</span>.</h1>
-            <p class="fs-4 ">Siempre buscamos las personas adecuadas para que trabajen con nosotros. Si te sientes listo
+            <p class="fs-4">Siempre buscamos las personas adecuadas para que trabajen con nosotros. Si te sientes listo
                 para
                 este reto, te esperamos para que te unas a nosotros.</p>
         </div>
@@ -180,7 +181,7 @@
         </div>
 
         <div id="local" class="border-top border-2">
-            <div class="mapa"> </div>
+            <div class="mapa"></div>
             <div>
                 <div class="wrapper-local">
                     <h2>Ubicado en Ecuador, la Floresta</h2>
@@ -209,7 +210,6 @@
 
     </section>
 
-
     <!-- SECCION CONTACTOS-->
 
     <section id="seccion-contacto" class="border-bottom border-secondary border-2">
@@ -224,26 +224,21 @@
 
         <!-- CONTENEDOR DEL FORMULARIO -->
 
-
-        <div class="container  border-top border-primary " style="max-width: 500px" id="contenedor-formulario">
+        <div class="container border-top border-primary" style="max-width: 500px" id="contenedor-formulario">
             <div class="text-center mb-4" id="titulo-formulario">
                 <div><img src="img/support.webp" alt="" class="img-fluid ps-5"></div>
                 <h2>Contactanos</h2>
                 <p class="fs-5">Estamos aqui para hacer realidad el viaje de tus sueños</p>
             </div>
 
-
-
             <form method="POST" data-netlify="true" action="#">
                 <div class="mb-3">
                     <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
                 </div>
 
-
                 <div class="mb-3">
                     <input type="input" class="form-control" id="name" name="name" placeholder="Angel Villamil">
                 </div>
-
 
                 <div class="mb-3">
                     <input type="tel" class="form-control" name="phone" id="phone" placeholder="Teléfono">
@@ -254,18 +249,16 @@
                 </div>
 
                 <div class="mb-3">
-                    <button type="submit" class=" btn btn-primary w-100 fs-5">Enviar Mensaje</button>
+                    <button type="submit" class="btn btn-primary w-100 fs-5">Enviar Mensaje</button>
                 </div>
             </form>
-
         </div>
     </section>
 
     <!--FOOTER-->
 
-
-    <footer class="w-100  d-flex  align-items-center justify-content-center flex-wrap">
-        <p class="fs-5 px-3  pt-3">EcuViaje &copy; Todos Los Derechos Reservados 2024</p>
+    <footer class="w-100 d-flex align-items-center justify-content-center flex-wrap">
+        <p class="fs-5 px-3 pt-3">EcuViaje &copy; Todos Los Derechos Reservados 2024</p>
         <div id="iconos">
             <a href="#"><i class="bi bi-facebook"></i></a>
             <a href="#"><i class="bi bi-twitter"></i></a>
