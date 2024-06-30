@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecuaviajes</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- Nuevo encabezado -->
     <header class="header">
-        <img src="img/logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Destinos</a></li>
-                <li><a href="#">Conócenos</a></li>
-                <li><a href="#">Noticias</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="search">
-            <input type="text" placeholder="Buscar">
-            <button>Buscar</button>
-        </div>
+        <p class="text-light mb-0 p-2 fs-6">BIENVENIDOS TRIPULANTES</p>
     </header>
 
+    <!-- Nueva barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light p-3" id="menu">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="fs-5 text-primary fw-bold">ECU VIAJE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./destinos.html">Destino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./html/cotizador.html">Cotiza tu Viaje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="conocenos.html">Sobre Nosotros</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="ciudad" placeholder="Busca tu ciudad" aria-label="BUSCAR">
+                    <button class="btn btn-primary btn-primary-outline-success" type="button">BUSCAR</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
     <h2 class="title">DESTINOS</h2>
-    
 
     <div class="destinos">
         <div class="destino">
@@ -48,7 +79,7 @@
         </div>
 
         <div class="destino">
-            <img src="img/paris.jpg" alt="Paris">
+            <img src="img/paris2.jpg" alt="Paris">
             <div class="info">
                 <a href="#">Paris</a>
                 <p>7 tours</p>
@@ -140,7 +171,7 @@
         </div>
 
         <div class="destino">
-            <img src="img/quito.jpg" alt="Quito">
+            <img src="img/quito2.jpg" alt="Quito">
             <div class="info">
                 <a href="#">Quito</a>
                 <p>2 tours</p>
@@ -188,7 +219,7 @@
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('myModalCuenca')">&times;</span>
                     <h2 id="modal-titleCuenca">Cuenca</h2>
-                    <p id="modal-contentCuenca">Ciudad en Ecuador famosa por su bien preservado centro histórico colonial, sus iglesias antiguas y su arte popular.</p>
+                    <p id="modal-contentCuenca">Conocida por su centro histórico, que es Patrimonio de la Humanidad por la UNESCO, y su arquitectura colonial española.</p>
                 </div>
             </div>
         </div>
@@ -197,7 +228,7 @@
             <img src="img/otavalo.png" alt="Otavalo">
             <div class="info">
                 <a href="#">Otavalo</a>
-                <p>1 tour</p>
+                <p>2 tours</p>
                 <button onclick="openModal('Otavalo')">Leer más</button>
                 <button>Reservar</button>
             </div>
@@ -206,7 +237,7 @@
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('myModalOtavalo')">&times;</span>
                     <h2 id="modal-titleOtavalo">Otavalo</h2>
-                    <p id="modal-contentOtavalo">Famoso por su mercado indígena que ofrece artesanías, textiles y más, rodeado de paisajes montañosos.</p>
+                    <p id="modal-contentOtavalo">Famoso por su mercado de artesanías, uno de los más grandes de América Latina, y sus alrededores pintorescos con lagos y montañas.</p>
                 </div>
             </div>
         </div>
@@ -216,15 +247,15 @@
             <div class="info">
                 <a href="#">Mitad del Mundo</a>
                 <p>1 tour</p>
-                <button onclick="openModal('Mitad')">Leer más</button>
+                <button onclick="openModal('MitadDelMundo')">Leer más</button>
                 <button>Reservar</button>
             </div>
             <!-- Modal para Mitad del Mundo -->
-            <div id="myModalMitad" class="modal">
+            <div id="myModalMitadDelMundo" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal('myModalMitad')">&times;</span>
-                    <h2 id="modal-titleMitad">Mitad del Mundo</h2>
-                    <p id="modal-contentMitad">Sitio en Ecuador donde se encuentra la línea ecuatorial, con monumentos y museos que exploran la geografía y la cultura del país.</p>
+                    <span class="close" onclick="closeModal('myModalMitadDelMundo')">&times;</span>
+                    <h2 id="modal-titleMitadDelMundo">Mitad del Mundo</h2>
+                    <p id="modal-contentMitadDelMundo">Ubicada cerca de Quito, este lugar marca la línea ecuatorial donde se puede estar en ambos hemisferios a la vez. Tiene un monumento y un museo.</p>
                 </div>
             </div>
         </div>
@@ -242,7 +273,7 @@
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('myModalCotopaxi')">&times;</span>
                     <h2 id="modal-titleCotopaxi">Cotopaxi</h2>
-                    <p id="modal-contentCotopaxi">Uno de los volcanes más altos y activos del mundo, situado en Ecuador, ofrece rutas de senderismo y vistas impresionantes.</p>
+                    <p id="modal-contentCotopaxi">Un impresionante volcán y parque nacional en Ecuador, ideal para el senderismo y la escalada, con una rica biodiversidad.</p>
                 </div>
             </div>
         </div>
@@ -260,7 +291,7 @@
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('myModalMisahualli')">&times;</span>
                     <h2 id="modal-titleMisahualli">Misahualli</h2>
-                    <p id="modal-contentMisahualli">Pueblo amazónico en Ecuador conocido por su fauna diversa, ríos navegables y actividades como la observación de aves y paseos en bote.</p>
+                    <p id="modal-contentMisahualli"> Un pequeño pueblo en la Amazonía ecuatoriana, conocido por sus playas fluviales y sus encuentros con monos capuchinos.</p>
                 </div>
             </div>
         </div>
@@ -269,76 +300,50 @@
             <img src="img/baños.jpg" alt="Baños">
             <div class="info">
                 <a href="#">Baños</a>
-                <p>5 tours</p>
+                <p>2 tours</p>
                 <button onclick="openModal('Baños')">Leer más</button>
                 <button>Reservar</button>
             </div>
+            <!-- Modal para Baños -->
             <div id="myModalBaños" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('myModalBaños')">&times;</span>
                     <h2 id="modal-titleBaños">Baños</h2>
-                    <p id="modal-contentBaños">es conocido por sus aguas termales naturales provenientes de la actividad
-                        volcánica de Tungurahua. Este destino turístico ofrece además impresionantes cascadas como la
-                        Cascada de la Virgen y el Manto de la Novia, ideales para practicar deportes de aventura como
-                        rafting y canopy. </p>
+                    <p id="modal-contentBaños">Famoso por su laguna y playa de arena rosa, un lugar paradisíaco en la isla de Creta, Grecia.</p>
                 </div>
             </div>
         </div>
 
         <div class="destino">
-            <img src="img/galapagos.jpg" alt="Galapagos">
+            <img src="img/galapagos.jpg" alt="Galápagos">
             <div class="info">
-                <a href="#">Galapagos</a>
-                <p>1 tour</p>
+                <a href="#">Galápagos</a>
+                <p>4 tours</p>
                 <button onclick="openModal('Galapagos')">Leer más</button>
                 <button>Reservar</button>
             </div>
-            <!-- Modal para Galapagos -->
+            <!-- Modal para Galápagos -->
             <div id="myModalGalapagos" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('myModalGalapagos')">&times;</span>
-                    <h2 id="modal-titleGalapagos">Galapagos</h2>
-                    <p id="modal-contentGalapagos">Archipiélago ecuatoriano famoso por su biodiversidad única, inspiró la teoría de la evolución de Charles Darwin.</p>
+                    <h2 id="modal-titleGalapagos">Galápagos</h2>
+                    <p id="modal-contentGalapagos"> Un archipiélago volcánico en el Océano Pacífico, famoso por su biodiversidad única y su papel en la teoría de la evolución de Darwin.</p>
                 </div>
             </div>
         </div>
+
     </div>
 
-<footer class="footer">
-        <div class="container">
-            <div class="row">
-                <p>&copy; 2024 Ecuaviajes. Todos los derechos reservados.</p>
-                <ul>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Términos de Uso</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    
     <script>
-        // Función para abrir el modal específico según el destino
-        function openModal(destination) {
-            var modalId = "myModal" + destination;
-            var modal = document.getElementById(modalId);
+        function openModal(destino) {
+            var modal = document.getElementById('myModal' + destino);
             modal.style.display = "block";
         }
 
-        // Función para cerrar el modal específico según el destino
         function closeModal(modalId) {
             var modal = document.getElementById(modalId);
             modal.style.display = "none";
         }
-
-        // Cerrar el modal haciendo clic fuera del contenido
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = "none";
-            }
-            
-        }
-        
     </script>
 </body>
 </html>
