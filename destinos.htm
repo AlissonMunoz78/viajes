@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuaviajes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cfcccc;
+            color: white;
+        }
+
+        .header {
+            background-image: url("img/fondo.jpg"); /* Reemplaza con tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .header nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .header .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .search input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .header .search button {
+            padding: 10px;
+            border: none;
+            background-color: #ff0000;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 32px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .destinos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centra los destinos horizontalmente */
+            gap: 20px;
+            padding: 0 20px;
+            max-width: 1200px; /* Limita el ancho máximo para controlar el tamaño */
+            margin: 0 auto; /* Centra el contenedor de destinos en la página */
+        }
+
+        .destino {
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #333;
+            max-width: 300px; /* Limita el ancho máximo de cada destino */
+            width: 100%; /* Asegura que cada destino ocupe el ancho completo del contenedor */
+        }
+
+        .destino img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block; /* Asegura que la imagen no tenga espacios en blanco alrededor */
+            margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+        }
+
+        .destino .info {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .destino .info a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .destino .info button {
+            background-color: rgb(40, 110, 190);
+            border: none;
+            color: white;
+            padding: 3px 8px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 5px;
+            float: right;
+            margin-right: 5px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #333;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Conócenos</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Buscar">
+            <button>Buscar</button>
+        </div>
+    </header>
+
+    <h2 class="title">DESTINOS</h2>
+    
+
+    <div class="destinos">
+        <div class="destino">
+            <img src="img/inglaterra.jpg" alt="Inglaterra">
+            <div class="info">
+                <a href="#">Inglaterra</a>
+                <p>4 tours</p>
+                <button onclick="openModal('Inglaterra')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Inglaterra -->
+            <div id="myModalInglaterra" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalInglaterra')">&times;</span>
+                    <h2 id="modal-titleInglaterra">Inglaterra</h2>
+                    <p id="modal-contentInglaterra"> Conocida por sus icónicos monumentos como el Big Ben, el Palacio de Buckingham y la Torre de Londres. También famosa por sus universidades de renombre como Oxford y Cambridge, y sus pintorescos paisajes rurales.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/paris.jpg" alt="Paris">
+            <div class="info">
+                <a href="#">Paris</a>
+                <p>7 tours</p>
+                <button onclick="openModal('Paris')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Paris -->
+            <div id="myModalParis" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalParis')">&times;</span>
+                    <h2 id="modal-titleParis">Paris</h2>
+                    <p id="modal-contentParis"> La Ciudad del amor es famosa por la Torre Eiffel, el Louvre, Notre Dame y el ambiente romántico de sus calles y cafés.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/dubai.jpg" alt="Dubai">
+            <div class="info">
+                <a href="#">Dubai</a>
+                <p>1 tour</p>
+                <button onclick="openModal('Dubai')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Dubai -->
+            <div id="myModalDubai" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalDubai')">&times;</span>
+                    <h2 id="modal-titleDubai">Dubai</h2>
+                    <p id="modal-contentDubai">Conocida por sus rascacielos impresionantes como el Burj Khalifa, centros comerciales de lujo como el Dubai Mall, y actividades como safaris por el desierto y parques acuáticos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/mexico.jpg" alt="Mexico">
+            <div class="info">
+                <a href="#">Mexico</a>
+                <p>4 tours</p>
+                <button onclick="openModal('Mexico')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Mexico -->
+            <div id="myModalMexico" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalMexico')">&times;</span>
+                    <h2 id="modal-titleMexico">Mexico</h2>
+                    <p id="modal-contentMexico">Famoso por sus antiguas pirámides como las de Teotihuacán y Chichén Itzá, sus playas de arena blanca en Cancún y Riviera Maya, y su vibrante cultura que incluye mariachis y la festividad del Día de los Muertos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/corea.jpg" alt="Corea del Sur">
+            <div class="info">
+                <a href="#">Corea del Sur</a>
+                <p>3 tours</p>
+                <button onclick="openModal('Corea')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Corea del Sur -->
+            <div id="myModalCorea" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalCorea')">&times;</span>
+                    <h2 id="modal-titleCorea">Corea del Sur</h2>
+                    <p id="modal-contentCorea">Destaca por su mezcla de tradición y modernidad con lugares como el palacio Gyeongbokgung en Seúl, la moderna ciudad de Busan, y la cultura del K-pop y los dramas coreanos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/suecia.jpg" alt="Suecia">
+            <div class="info">
+                <a href="#">Suecia</a>
+                <p>5 tours</p>
+                <button onclick="openModal('Suecia')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Suecia -->
+            <div id="myModalSuecia" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalSuecia')">&times;</span>
+                    <h2 id="modal-titleSuecia">Suecia</h2>
+                    <p id="modal-contentSuecia"> Conocida por su diseño minimalista, Estocolmo ofrece el Museo Vasa y el
+                        Palacio Real. La región de Laponia es ideal para ver auroras boreales y disfrutar del aire
+                        libre.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/quito.jpg" alt="Quito">
+            <div class="info">
+                <a href="#">Quito</a>
+                <p>2 tours</p>
+                <button onclick="openModal('Quito')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Quito -->
+            <div id="myModalQuito" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalQuito')">&times;</span>
+                    <h2 id="modal-titleQuito">Quito</h2>
+                    <p id="modal-contentQuito">La capital de Ecuador, ubicada en la cordillera de los Andes, conocida por su bien preservado centro histórico y sus vistas del volcán Pichincha.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/guayaquil.jpg" alt="Guayaquil">
+            <div class="info">
+                <a href="#">Guayaquil</a>
+                <p>1 tour</p>
+                <button onclick="openModal('Guayaquil')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Guayaquil -->
+            <div id="myModalGuayaquil" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalGuayaquil')">&times;</span>
+                    <h2 id="modal-titleGuayaquil">Guayaquil</h2>
+                    <p id="modal-contentGuayaquil">La ciudad más grande de Ecuador, situada junto al río Guayas y conocida por su malecón 2000, su arquitectura moderna y su clima tropical.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/cuenca.png" alt="Cuenca">
+            <div class="info">
+                <a href="#">Cuenca</a>
+                <p>1 tour</p>
+                <button onclick="openModal('Cuenca')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Cuenca -->
+            <div id="myModalCuenca" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalCuenca')">&times;</span>
+                    <h2 id="modal-titleCuenca">Cuenca</h2>
+                    <p id="modal-contentCuenca">Ciudad en Ecuador famosa por su bien preservado centro histórico colonial, sus iglesias antiguas y su arte popular.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/otavalo.png" alt="Otavalo">
+            <div class="info">
+                <a href="#">Otavalo</a>
+                <p>1 tour</p>
+                <button onclick="openModal('Otavalo')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Otavalo -->
+            <div id="myModalOtavalo" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalOtavalo')">&times;</span>
+                    <h2 id="modal-titleOtavalo">Otavalo</h2>
+                    <p id="modal-contentOtavalo">Famoso por su mercado indígena que ofrece artesanías, textiles y más, rodeado de paisajes montañosos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/mitad del mundo.jpg" alt="Mitad del Mundo">
+            <div class="info">
+                <a href="#">Mitad del Mundo</a>
+                <p>1 tour</p>
+                <button onclick="openModal('Mitad')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Mitad del Mundo -->
+            <div id="myModalMitad" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalMitad')">&times;</span>
+                    <h2 id="modal-titleMitad">Mitad del Mundo</h2>
+                    <p id="modal-contentMitad">Sitio en Ecuador donde se encuentra la línea ecuatorial, con monumentos y museos que exploran la geografía y la cultura del país.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/cotopaxi.jpg" alt="Cotopaxi">
+            <div class="info">
+                <a href="#">Cotopaxi</a>
+                <p>1 tour</p>
+                <button onclick="openModal('Cotopaxi')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Cotopaxi -->
+            <div id="myModalCotopaxi" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalCotopaxi')">&times;</span>
+                    <h2 id="modal-titleCotopaxi">Cotopaxi</h2>
+                    <p id="modal-contentCotopaxi">Uno de los volcanes más altos y activos del mundo, situado en Ecuador, ofrece rutas de senderismo y vistas impresionantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/misahualli.jpg" alt="Misahualli">
+            <div class="info">
+                <a href="#">Misahualli</a>
+                <p>1 tour</p>
+                <button onclick="openModal('Misahualli')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Misahualli -->
+            <div id="myModalMisahualli" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalMisahualli')">&times;</span>
+                    <h2 id="modal-titleMisahualli">Misahualli</h2>
+                    <p id="modal-contentMisahualli">Pueblo amazónico en Ecuador conocido por su fauna diversa, ríos navegables y actividades como la observación de aves y paseos en bote.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/baños.jpg" alt="Baños">
+            <div class="info">
+                <a href="#">Baños</a>
+                <p>5 tours</p>
+                <button onclick="openModal('Baños')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <div id="myModalBaños" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalBaños')">&times;</span>
+                    <h2 id="modal-titleBaños">Baños</h2>
+                    <p id="modal-contentBaños">es conocido por sus aguas termales naturales provenientes de la actividad
+                        volcánica de Tungurahua. Este destino turístico ofrece además impresionantes cascadas como la
+                        Cascada de la Virgen y el Manto de la Novia, ideales para practicar deportes de aventura como
+                        rafting y canopy. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/galapagos.jpg" alt="Galapagos">
+            <div class="info">
+                <a href="#">Galapagos</a>
+                <p>1 tour</p>
+                <button onclick="openModal('Galapagos')">Leer más</button>
+                <button>Reservar</button>
+            </div>
+            <!-- Modal para Galapagos -->
+            <div id="myModalGalapagos" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalGalapagos')">&times;</span>
+                    <h2 id="modal-titleGalapagos">Galapagos</h2>
+                    <p id="modal-contentGalapagos">Archipiélago ecuatoriano famoso por su biodiversidad única, inspiró la teoría de la evolución de Charles Darwin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <p>&copy; 2024 Ecuaviajes. Todos los derechos reservados.</p>
+                <ul>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Función para abrir el modal específico según el destino
+        function openModal(destination) {
+            var modalId = "myModal" + destination;
+            var modal = document.getElementById(modalId);
+            modal.style.display = "block";
+        }
+
+        // Función para cerrar el modal específico según el destino
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+        }
+
+        // Cerrar el modal haciendo clic fuera del contenido
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+            
+        }
+
+        
+    </script>
+</body>
+</html>
