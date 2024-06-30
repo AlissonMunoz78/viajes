@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Viaje</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body>
+    
+  <!-- Nuevo encabezado -->
+  <header class="header">
+    <p class="text-light mb-0 p-2 fs-6">BIENVENIDOS TRIPULANTES</p>
+</header>
+
+<!-- Nueva barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light p-3" id="menu">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <span class="fs-5 text-primary fw-bold">ECU VIAJE</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./destinos.html">Destino</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./html/cotizador.html">Cotiza tu Viaje</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="conocenos.html">Sobre Nosotros</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="ciudad" placeholder="Busca tu ciudad" aria-label="BUSCAR">
+                <button class="btn btn-primary btn-primary-outline-success" type="button">BUSCAR</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+            <div>
+                <a href="#" class="btn btn-outline-light mr-2 btn-login">Iniciar sesión</a>
+
+            </div>
+        </div>
+    </header>
+    
+    
+    
+    <div class="container mt-4">
+    <div class="row">
+        <!-- Columna 1:-->
+        <div class="col-md-4 mb-4">
+            <div id="carouselOfertasEspeciales" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <h2 class="card-title">Ofertas Especiales</h2>
+                    <div class="carousel-item active">
+                        <img src="Imagenes/Ofertas Especiales/Pac1.jpg" class="d-block w-100" alt="Oferta Especial 1">
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Ofertas Especiales/pac2.jpg" class="d-block w-100" alt="Oferta Especial 2">
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Ofertas Especiales/pac 3.jpg" class="d-block w-100" alt="Oferta Especial 3">
+                        
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselOfertasEspeciales" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselOfertasEspeciales" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+       <!-- Columna 2:-->
+        <div class="col-md-4 mb-1">
+            <div id="carouselDestinosSugeridos" class="carousel slide mb-4" data-ride="carousel">
+                <h2 class="text-center">Destinos Sugeridos</h2>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Imagenes/Destinos sugeridos/inglaterra.webp" class="d-block w-100" alt="Inglaterra">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Inglaterra</p>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/paris.jpg" class="d-block w-100" alt="Paris">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Paris, Francia</p>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/dubai.jpg" class="d-block w-100" alt="Dubai">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Dubai, Emiratos Árabes Unidos</p>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/mexico.jpg" class="d-block w-100" alt="Mexico">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Mexico</p>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/corea.webp" class="d-block w-100" alt="Corea del Sur">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Corea del Sur</p>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/suecia.webp" class="d-block w-100" alt="Suecia">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Suecia</p>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/italia.jpg" class="d-block w-100" alt="Italia">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Italia</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/peru.jpg" class="d-block w-100" alt="Peru">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Peru</p>
+                        </div>
+                       
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/egipto.jpg" class="d-block w-100" alt="Egipto">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Egipto</p>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Destinos sugeridos/ecuador.jpg" class="d-block w-100" alt="Ecuador">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Ecuador</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselDestinosSugeridos" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselDestinosSugeridos" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Columna 3:-->
+        <div class="col-md-4 mb-4">
+            <div id="carouselFiestas" class="carousel slide" data-ride="carousel">
+                <h2 class="text-center">Fiestas en el Mundo</h2>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Imagenes/Fiestas/Fiesta1.webp" class="d-block w-100" alt="Fiesta 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Año nuevo Chino</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Fiestas/Fiesta2.webp" class="d-block w-100" alt="Fiesta 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Carnaval de Venecia</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Fiestas/Fiesta3.webp" class="d-block w-100" alt="Fiesta 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Carnaval de Río de Janeiro</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Fiestas/Fiesta4.webp" class="d-block w-100" alt="Fiesta 4">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Mardi Gras</p>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Fiestas/Fiesta5.webp" class="d-block w-100" alt="Fiesta 5">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Festival Holi</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Imagenes/Fiestas/Fiesta6.webp" class="d-block w-100" alt="Fiesta 6">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Fallas</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselFiestas" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselFiestas" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    
+<main class="container mt-4">
+    <section class="search-form mb-4">
+        <h2>Buscar Viaje</h2>
+        <form id="searchForm">
+            <label for="destination">Destino:</label>
+            <input list="destinations" id="destinationInput" name="destination" autocomplete="off">
+            <datalist id="destinations">
+                <!-- Argentina -->
+                <option value="Argentina, Buenos Aires">
+                <!-- Australia -->
+                <option value="Australia, Melbourne">
+                <option value="Australia, Sídney">
+                <!-- Canadá -->
+                <option value="Canadá, Montreal">
+                <option value="Canadá, Toronto">
+                <!-- China -->
+                <option value="China, Pekín">
+                <option value="China, Shanghái">
+                <!-- Colombia -->
+                <option value="Colombia, Cartagena">
+                <!-- Corea del Sur -->
+                <option value="Corea del Sur, Seúl">
+                <!-- Costa Rica -->
+                <option value="Costa Rica, San José">
+                <!-- Ecuador -->
+                <option value="Ecuador, Galápagos">
+                <option value="Ecuador, Quito">
+                <!-- Egipto -->
+                <option value="Egipto, El Cairo">
+                <!-- Emiratos Árabes Unidos -->
+                <option value="Emiratos Árabes Unidos, Abu Dabi">
+                <option value="Emiratos Árabes Unidos, Dubái">
+                <!-- España -->
+                <option value="España, Barcelona">
+                <!-- Estados Unidos -->
+                <option value="Estados Unidos, Los Ángeles">
+                <option value="Estados Unidos, Nueva York">
+                <!-- Francia -->
+                <option value="Francia, París">
+                <!-- Hong Kong -->
+                <option value="Hong Kong, Hong Kong">
+                <!-- Indonesia -->
+                <option value="Indonesia, Bali">
+                <!-- Italia -->
+                <option value="Italia, Roma">
+                <!-- Japón -->
+                <option value="Japón, Kioto">
+                <option value="Japón, Tokio">
+                <!-- Marruecos -->
+                <option value="Marruecos, Marrakech">
+                <!-- México -->
+                <option value="México, Cancún">
+                <option value="México, Ciudad de México">
+                <!-- Perú -->
+                <option value="Perú, Cusco">
+                <option value="Perú, Lima">
+                <option value="Perú, Machu Picchu">
+                <!-- Singapur -->
+                <option value="Singapur, Singapur">
+                <!-- Sudáfrica -->
+                <option value="Sudáfrica, Ciudad del Cabo">
+                <!-- Tailandia -->
+                <option value="Tailandia, Bangkok">
+                <option value="Tailandia, Phuket">
+                <!-- Reino Unido -->
+                <option value="Reino Unido, Londres">
+            </datalist>
+            <label for="departure-date">Fecha de Salida:</label>
+            <input type="date" id="departure-date" name="departure-date">
+            <label for="return-date">Fecha de Regreso:</label>
+            <input type="date" id="return-date" name="return-date">
+            <label for="travelers">Número de Viajeros:</label>
+            <input type="number" id="travelers" name="travelers" min="1">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+    </section>
+
+    <section class="results">
+        <h2>Resultados de Búsqueda</h2>
+        <div id="searchResults"></div>
+
+        <button type="submit" class="btn btn-primary btn-login mr-2">Cotiza</button>
+
+    </section>
+</main>
+
+<script>
+    const searchForm = document.getElementById('searchForm');
+    const destinationInput = document.getElementById('destinationInput');
+    const searchResults = document.getElementById('searchResults');
+
+    searchForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const selectedDestination = destinationInput.value;
+
+        const destinationsData = {
+            'Argentina, Buenos Aires': {
+                image: 'Imagenes/Destinos/argentina.jpeg',
+                description: 'Buenos Aires es la capital de Argentina y una ciudad vibrante llena de cultura y diversidad.'
+            },
+            'Australia, Melbourne': {
+                image: 'Imagenes/Destinos/melbourne.jpg',
+                description: 'Melbourne es conocida por su arte callejero, cafés y una vibrante escena cultural.'
+            },
+            'Australia, Sídney': {
+                image: 'Imagenes/Destinos/sydney.webp',
+                description: 'Sídney es famosa por su icónica Ópera y el Puente del Puerto, junto con sus hermosas playas.'
+            },
+            'Canadá, Montreal': {
+                image: 'Imagenes/Destinos/montreal.jpg',
+                description: 'Montreal combina la arquitectura europea con un ambiente multicultural vibrante.'
+            },
+            'Canadá, Toronto': {
+                image: 'Imagenes/Destinos/toronto.jpg',
+                description: 'Toronto es una ciudad diversa con una impresionante línea de horizonte y atracciones culturales.'
+            },
+            'China, Pekín': {
+                image: 'Imagenes/Destinos/pekin.jpg',
+                description: 'Pekín es la capital de China, conocida por su rica historia y monumentos antiguos.'
+            },
+            'China, Shanghái': {
+                image: 'Imagenes/Destinos/shanghai.jpg',
+                description: 'Shanghái es una metrópolis moderna y cosmopolita con una fascinante mezcla de culturas.'
+            },
+            'Colombia, Cartagena': {
+                image: 'Imagenes/Destinos/cartagena.jfif',
+                description: 'Cartagena es una ciudad costera colombiana con un casco antiguo bien conservado y playas de arena blanca.'
+            },
+            'Corea del Sur, Seúl': {
+                image: 'Imagenes/Destinos/seul.jfif',
+                description: 'Seúl es la capital de Corea del Sur y combina rascacielos modernos con templos históricos y mercados bulliciosos.'
+            },
+            'Costa Rica, San José': {
+                image: 'Imagenes/Destinos/sanjose.jfif',
+                description: 'San José es la capital de Costa Rica, rodeada de exuberante vegetación y conocida por su cultura y arte.'
+            },
+            'Ecuador, Galápagos': {
+                image: 'Imagenes/Destinos/galapagos.jfif',
+                description: 'Las Islas Galápagos en Ecuador son famosas por su diversidad única de flora y fauna.'
+            },
+            'Ecuador, Quito': {
+                image: 'Imagenes/Destinos/quito.jpg',
+                description: 'Quito, la capital de Ecuador, está situada en un valle rodeado de montañas y es conocida por su arquitectura colonial.'
+            },
+            'Egipto, El Cairo': {
+                image: 'Imagenes/Destinos/cairo.jpg',
+                description: 'El Cairo es la capital de Egipto y alberga las pirámides de Giza, símbolo icónico de la antigua civilización egipcia.'
+            },
+            'Emiratos Árabes Unidos, Abu Dabi': {
+                image: 'Imagenes/Destinos/abudhabi.jfif',
+                description: 'Abu Dabi es la capital de los Emiratos Árabes Unidos y es conocida por sus rascacielos modernos y centros culturales.'
+            },
+            'Emiratos Árabes Unidos, Dubái': {
+                image: 'Imagenes/Destinos/dubai.jfif',
+                description: 'Dubái es famosa por su arquitectura futurista, centros comerciales de lujo y vida nocturna vibrante.'
+            },
+            'España, Barcelona': {
+                image: 'Imagenes/Destinos/barcelona.jpg',
+                description: 'Barcelona es una ciudad española conocida por su arquitectura modernista, playas y vida cultural animada.'
+            },
+            'Estados Unidos, Los Ángeles': {
+                image: 'Imagenes/Destinos/losangeles.jpg',
+                description: 'Los Ángeles es una ciudad en California famosa por Hollywood, sus playas y el entretenimiento.'
+            },
+            'Estados Unidos, Nueva York': {
+                image: 'Imagenes/Destinos/nuevayork.jpg',
+                description: 'Nueva York es la ciudad más grande de Estados Unidos y un centro cultural y financiero mundial.'
+            },
+            'Francia, París': {
+                image: 'Imagenes/Destinos/paris.jpg',
+                description: 'París es la capital de Francia y es conocida por su arte, moda, gastronomía y monumentos icónicos como la Torre Eiffel.'
+            },
+            'Hong Kong, Hong Kong': {
+                image: 'Imagenes/Destinos/hongkong.webp',
+                description: 'Hong Kong es una región administrativa especial de China conocida por su skyline espectacular y su mezcla única de culturas.'
+            },
+            'Indonesia, Bali': {
+                image: 'Imagenes/Destinos/bali.jpg',
+                description: 'Bali es una isla de Indonesia conocida por sus playas, paisajes montañosos, y templos hindúes.'
+            },
+            'Italia, Roma': {
+                image: 'Imagenes/Destinos/roma.jpg',
+                description: 'Roma, la capital de Italia, es una ciudad antigua con arte renacentista y ruinas antiguas como el Coliseo.'
+            },
+            'Japón, Kioto': {
+                image: 'Imagenes/Destinos/kioto.jpg',
+                description: 'Kioto es una ciudad japonesa famosa por sus templos budistas, jardines zen y arquitectura clásica.'
+            },
+            'Japón, Tokio': {
+                image: 'Imagenes/Destinos/tokio.jpg',
+                description: 'Tokio es la capital de Japón y una metrópolis moderna llena de tecnología, cultura pop y tradiciones antiguas.'
+            },
+            'Marruecos, Marrakech': {
+                image: 'Imagenes/Destinos/marruecos.jpg',
+                description: 'Marrakech es una ciudad marroquí conocida por sus mercados, palacios y jardines históricos.'
+            },
+            'México, Cancún': {
+                image: 'Imagenes/Destinos/cancun.jpg',
+                description: 'Cancún es un destino mexicano famoso por sus playas de arena blanca y aguas turquesas.'
+            },
+            'México, Ciudad de México': {
+                image: 'Imagenes/Destinos/ciudaddemexico.jpg',
+                description: 'Ciudad de México es la capital de México, conocida por su arquitectura histórica y vibrante vida cultural.'
+            },
+            'Perú, Cusco': {
+                image: 'Imagenes/Destinos/cusco.jpg',
+                description: 'Cusco es una ciudad peruana conocida como la puerta de entrada a Machu Picchu, con su historia incaica y arquitectura colonial.'
+            },
+            'Perú, Lima': {
+                image: 'Imagenes/Destinos/lima.jpg',
+                description: 'Lima es la capital de Perú y una ciudad costera con una rica historia colonial y una escena gastronómica destacada.'
+            },
+            'Perú, Machu Picchu': {
+                image: 'Imagenes/Destinos/machupicchu.jpg',
+                description: 'Machu Picchu en Perú es una antigua ciudad inca ubicada en lo alto de los Andes, famosa por su arquitectura y paisajes impresionantes.'
+            },
+            'Singapur, Singapur': {
+                image: 'Imagenes/Destinos/singapur.jpg',
+                description: 'Singapur es una ciudad-estado en el sudeste asiático conocida por su arquitectura futurista y su mezcla cultural diversa.'
+            },
+            'Sudáfrica, Ciudad del Cabo': {
+                image: 'Imagenes/Destinos/ciudaddelcabo.jpg',
+                description: 'Ciudad del Cabo en Sudáfrica es famosa por su paisaje montañoso, playas impresionantes y vida cultural vibrante.'
+            },
+            'Tailandia, Bangkok': {
+                image: 'Imagenes/Destinos/bangkok.jpg',
+                description: 'Bangkok es la capital de Tailandia y es conocida por sus templos ornamentados, mercados bulliciosos y vida nocturna animada.'
+            },
+            'Tailandia, Phuket': {
+                image: 'Imagenes/Destinos/phuket.jpg',
+                description: 'Phuket es una isla tailandesa famosa por sus playas de arena blanca, aguas cristalinas y vida nocturna vibrante.'
+            },
+            'Reino Unido, Londres': {
+                image: 'Imagenes/Destinos/londres.jpg',
+                description: 'Londres es la capital del Reino Unido y es conocida por su historia, cultura, teatro y monumentos emblemáticos como el Big Ben.'
+            }
+        };
+
+
+        if (destinationsData[selectedDestination]) {
+            const destinationInfo = destinationsData[selectedDestination];
+
+            const destinationImage = document.createElement('img');
+            destinationImage.src = destinationInfo.image;
+            destinationImage.alt = selectedDestination;
+            destinationImage.classList.add('destination-image');
+
+            const destinationText = document.createElement('p');
+            destinationText.textContent = destinationInfo.description;
+
+            searchResults.innerHTML = '';
+            searchResults.appendChild(destinationImage);
+            searchResults.appendChild(destinationText);
+        } else {
+   
+            searchResults.innerHTML = '<p>Destino no encontrado.</p>';
+            const notFoundImage = document.createElement('img');
+            notFoundImage.src = 'Imagenes/DestinoNo.jpg'; 
+            notFoundImage.alt = 'Destino no encontrado';
+            notFoundImage.classList.add('not-found-image');
+            searchResults.appendChild(notFoundImage);
+        }
+    });
+</script>
+
+
+
+
+<section class="globe-section mt-4">
+    <div class="container">
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title">Explorar el Mundo</h2>
+                <a href="https://earth3dmap.com/">
+                    <img src="Imagenes/Objetos/Globo_terraqueo_3.gif" alt="Globo Terráqueo" class="img-fluid globe-image">
+                </a>
+                
+                <p class="mt-3">Haz clic en el globo para explorar destinos.</p>
+                <button class="btn btn-primary btn-explore">Explorar</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="special-offers-section mt-4">
+    <div class="container">
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title">Ofertas Especiales</h2>
+                <p>Descubre nuestras ofertas especiales para tus próximos viajes.</p>
+                <section class="ofertas-section mt-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Ofertas Especiales/Pac1.jpg" class="card-img-top" alt="Oferta Especial 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Paquete Romántico en París</h5>
+                                        <p class="card-text">Compra paquetes y acumula millas LATAM Pass por cada dólar gastado:
+                                            "¡Viaja más y acumula millas LATAM Pass con cada compra! Descubre nuestros irresistibles paquetes y convierte tus dólares en experiencias inolvidables."</p>
+                                            <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Ofertas Especiales/pac2.jpg" class="card-img-top" alt="Oferta Especial 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Aventura en el Desierto de Dubái</h5>
+                                        <p class="card-text">Reserva hoteles para tu viaje soñado y acumula millas LATAM Pass por cada dólar gastado:
+                                            "Haz realidad tu viaje soñado y acumula millas LATAM Pass por cada dólar gastado al reservar tu hotel con nosotros. ¡No esperes más para ganar mientras disfrutas!</p>
+                                            <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Ofertas Especiales/pac 3.jpg" class="card-img-top" alt="Oferta Especial 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Escapada Cultural a Roma</h5>
+                                        <p class="card-text">Viaja tranquilo y sin preocupaciones al adquirir tu asistencia en viaje con nosotros. Garantiza tu seguridad y disfruta cada momento al máximo. ¡Tu tranquilidad es nuestra prioridad!</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="destinos-section mt-4">
+    <div class="container">
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title">Destinos Sugeridos</h2>
+                <p>Descubre algunos de nuestros destinos recomendados.</p>
+                <section class="destinos-section mt-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/inglaterra.webp" class="card-img-top" alt="Inglaterra">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Inglaterra</h5>
+                                        <p class="card-text">Descubre la historia y la cultura de Inglaterra, desde los emblemáticos palacios hasta las verdes colinas.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/paris.jpg" class="card-img-top" alt="Paris">
+                                    <div class="card-body">
+                                        <h5 class="card-title">París, Francia</h5>
+                                        <p class="card-text">Explora la ciudad del amor y disfruta de la arquitectura icónica y la deliciosa gastronomía.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/dubai.jpg" class="card-img-top" alt="Dubai">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dubái, Emiratos Árabes Unidos</h5>
+                                        <p class="card-text">Sumérgete en el lujo y la modernidad de Dubái, con sus rascacielos impresionantes y el desierto cercano.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/mexico.jpg" class="card-img-top" alt="México">
+                                    <div class="card-body">
+                                        <h5 class="card-title">México</h5>
+                                        <p class="card-text">Disfruta de la rica cultura mexicana, desde las antiguas pirámides hasta las playas de arena blanca.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/corea.webp" class="card-img-top" alt="Corea del Sur">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Corea del Sur</h5>
+                                        <p class="card-text">Explora la mezcla única de tradición y tecnología en Corea del Sur, desde templos antiguos hasta ciudades modernas.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/suecia.webp" class="card-img-top" alt="Suecia">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Suecia</h5>
+                                        <p class="card-text">Descubre la belleza natural de Suecia con sus lagos cristalinos y su diseño moderno y minimalista.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/italia.jpg" class="card-img-top" alt="Italia">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Italia</h5>
+                                        <p class="card-text">Explora la historia, el arte y la gastronomía de Italia, desde las ruinas romanas hasta las pintorescas villas en la Toscana.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/peru.jpg" class="card-img-top" alt="Perú">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Perú</h5>
+                                        <p class="card-text">Descubre la civilización inca y las maravillas naturales de Perú, desde Machu Picchu hasta la Amazonía.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Destinos sugeridos/egipto.jpg" class="card-img-top" alt="Egipto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Egipto</h5>
+                                        <p class="card-text">Explora las pirámides antiguas y las ciudades históricas a lo largo del río Nilo en Egipto.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fiestas-section mt-4">
+    <div class="container">
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title">Fiestas del Mundo</h2>
+                <p>Explora las festividades más emocionantes alrededor del mundo.</p>
+                <section class="fiestas-section mt-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Fiestas/Fiesta1.webp" class="card-img-top" alt="Fiesta 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Año Nuevo Chino</h5>
+                                        <p class="card-text">El Año Nuevo Chino, también conocido como la Fiesta de la Primavera, es la festividad más importante para los chinos y se celebra en enero o febrero.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Fiestas/Fiesta2.webp" class="card-img-top" alt="Fiesta 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Carnaval de Venecia</h5>
+                                        <p class="card-text">El Carnaval de Venecia es famoso por sus máscaras y trajes elaborados. Se celebra en Venecia, Italia, antes de la Cuaresma.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Fiestas/Fiesta3.webp" class="card-img-top" alt="Fiesta 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Carnaval de Río de Janeiro</h5>
+                                        <p class="card-text">El Carnaval de Río de Janeiro es uno de los mayores festivales del mundo, conocido por sus desfiles de samba y coloridos disfraces.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Fiestas/Fiesta4.webp" class="card-img-top" alt="Fiesta 4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mardi Gras</h5>
+                                        <p class="card-text">Mardi Gras es una celebración cristiana y cultural que tiene lugar el día antes del Miércoles de Ceniza. Es conocido por sus desfiles y disfraces extravagantes.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Fiestas/Fiesta5.webp" class="card-img-top" alt="Fiesta 5">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Festival Holi</h5>
+                                        <p class="card-text">El Festival Holi, también conocido como el Festival de los Colores, es una festividad hindú que celebra la llegada de la primavera. Es famoso por su lanzamiento de polvos de colores.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="Imagenes/Fiestas/Fiesta6.webp" class="card-img-top" alt="Fiesta 6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fallas</h5>
+                                        <p class="card-text">Las Fallas son una festividad en Valencia, España, que se celebra en honor a San José. Es conocida por sus monumentos falleros y la quema final.</p>
+                                        <button class="btn btn-primary btn-cotiza">Cotiza YA!</button>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    
+</style>
+
+<script>
+    $(document).ready(function() {
+        $('.globe-image').hover(function() {
+            $(this).addClass('globe-image-hover');
+        }, function() {
+            $(this).removeClass('globe-image-hover');
+        });
+    });
+</script>
+
+
+<footer class="bg-blue text-white text-center py-4">
+    <div class="footer-container">
+   
+        <div class="footer-column">
+            <div class="social-icons">
+                <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <div class="contact-section mt-3">
+                <p>Contacto: info@ecuviajes.com</p>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <p>© 2024 EcuViajes</p>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="loginModalLabel">A un paso de reservar...</h5>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p class="text-center text-muted mb-0">¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<script>
+    $(document).ready(function() {
+ 
+        $('.btn-login').click(function() {
+            $('#loginModal').modal('show');
+        });
+
+        $('.btn-explore').click(function() {
+            $('#loginModal').modal('show');
+        });
+
+        $('.search-form').submit(function(event) {
+            event.preventDefault(); 
+            $('#loginModal').modal('show'); 
+        });
+
+        $('.btn-cotiza').click(function() {
+            $('#loginModal').modal('show');
+        });
+    });
+</script>
+
+</body>
+</html>
